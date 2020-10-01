@@ -1,0 +1,13 @@
+common:
+    target:
+        - cortex-m4
+    includes:
+        - source/microchip/pic32cx2051mtg
+    sources:
+        - source/microchip/pic32cx2051mtg/FlashDev.c
+        - source/microchip/pic32cx2051mtg/FlashPrg.c
+        - source/microchip/pic32cx2051mtg/flashd.c
+        - source/microchip/pic32cx2051mtg/efc.c
+    macros:
+        - __NO_EMBEDDED_ASM
+        - CPU_PIC32CX2051MTG
