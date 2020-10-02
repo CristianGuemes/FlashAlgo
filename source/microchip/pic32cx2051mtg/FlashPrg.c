@@ -109,3 +109,23 @@ uint32_t ProgramPage(uint32_t adr, uint32_t sz, uint32_t *buf)
 
 	return (0);
 }
+
+/*
+ *  Verify Flash Contents
+ *    Parameter:      adr:  Start Address
+ *                    sz:   Size (in bytes)
+ *                    buf:  Data
+ *    Return Value:   (adr+sz) - OK, Failed Address
+ */
+unsigned long Verify (unsigned long adr, unsigned long sz, unsigned char *buf)
+{
+	uint8_t *puc_flash_data;
+	
+	puc_flash_data = (uint8_t *)adr;
+	
+	if (memcmp(puc_flash_data, buf, sz) == 0) {
+		return (adr + sz);
+	} else {
+		return (adr);
+	}
+}
