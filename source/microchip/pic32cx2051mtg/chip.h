@@ -30,9 +30,6 @@
 #ifndef PIC32CX_CHIP_H
 #define PIC32CX_CHIP_H
 
-/* Do not use cmsis */
-#define DONT_USE_CMSIS_INIT
-
 /*
  * Peripherals registers definitions
  */
